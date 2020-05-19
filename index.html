@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<title>Loading..</title>
+		<link rel="stylesheet" type="text/css" href="loading.css?3" />
+		<script type="text/javascript" src="js/thirdparty/jquery.js"></script>
+	</head>
+	<body>
+	<!-- partial:index.partial.html -->
+<div id="particles-js"></div>
+		<div id="container">
+
+			<img src='img/bg.png' class="bounce"/>
+			
+			<center>
+				<br />
+				<div class="walk">:v</div>
+			</center>
+
+		</div>
+		
+
+		<script type="text/javascript">
+
+			function GameDetails( servername, serverurl, mapname, maxplayers, steamid, gamemode )
+			{
+				// Do with these what you will :)
+				// this function gets called only when joining a multiplayer server
+
+				//$("#spambox").append("serverurl: " + serverurl + "<br>");
+				//$("#spambox").append("servername: " + servername + "<br>");
+				//$("#spambox").append("maxplayers: " + maxplayers + "<br>");
+				//$("#spambox").append("steamid: " + steamid + "<br>");
+				//$("#spambox").append("gamemode: " + gamemode + "<br>");
+				//$("#spambox").append("mapname: " + mapname + "<br>");
+			}
+			
+			function SetFilesTotal( total ) {}
+			
+			function DownloadingFile( fileName ) {}
+			
+			function SetStatusChanged( status ) {}
+			
+			function SetFilesNeeded( needed ) {}
+	
+		</script>
+
+	<head>
+	<?php
+		$communityid = $_GET[user];
+		$mapname = $_GET[mapname];
+		$maxplayers = $_GET[maxplayers];
+		$gamemode = $_GET[gamemode];
+		
+		
+		$authserver = bcsub( $communityid, '76561197960265728' ) & 1;
+		$authid = (bcsub( $communityid, '76561197960265728' ) - $authservers ) / 2;
+		$steamid = "STEAM_0:$authserver:$authid";
+		
+		?>
+	</head>
+
+	<body>
+		<div id="userInfo">
+			<?php echo "Welcome $communityid <br>";
+			echo "Map: $mapname<br>";
+			echo "Players: $maxplayers<br>";
+			echo "Gamemode: $gamemode<br>"; 
+			?>
+		</div>
+	</body>	
+		
+		
+		
+<!-- partial -->
+<script src='https://cldup.com/S6Ptkwu_qA.js'></script>
+<script  src="./script.js"></script>
+
+
+
+	</body>
+</html>
